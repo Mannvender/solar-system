@@ -21,7 +21,7 @@ const Planet = (props: any) => {
       onPointerOver={(e) => setHover(true)}
       onPointerOut={(e) => setHover(false)}
     >
-      <sphereBufferGeometry attach="geometry" args={[50, 32, 32]} />
+      <sphereBufferGeometry attach="geometry" args={[1, 32, 32]} />
       <meshStandardMaterial
         attach="material"
         color={hovered ? "hotpink" : "orange"}

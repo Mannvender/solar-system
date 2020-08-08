@@ -1,11 +1,15 @@
 import React from "react"
-import { Canvas } from "react-three-fiber"
+import { Canvas, extend } from "react-three-fiber"
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 
-import { Planet } from "components"
+import { Planet, CameraControls } from "components"
+
+extend({ OrbitControls })
 
 const Home = () => {
   return (
-    <Canvas orthographic camera={{ position: [0, 0, 500] }}>
+    <Canvas>
+      <CameraControls />
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
       <Planet position={[2.2, 0, 0]} />
