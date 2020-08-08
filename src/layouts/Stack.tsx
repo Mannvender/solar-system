@@ -9,7 +9,14 @@ interface Props {
 }
 const StackLayout = ({ children }: Props) => {
   return (
-    <Box height="100vh" bgColor="dark-1">
+    <Box
+      height="100vh"
+      bgColor="dark-1"
+      style={{
+        backgroundImage: `url(${process.env.PUBLIC_URL + "space.jpg"})`,
+        backgroundSize: "cover",
+      }}
+    >
       {children}
     </Box>
   )
