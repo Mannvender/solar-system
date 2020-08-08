@@ -10,15 +10,20 @@ import PublicRoute from "routes/Public"
 import PublicOnlyRoute from "routes/PublicOnly"
 import PrivateRoute from "routes/Private"
 
+export interface Theme {
+  color?: any
+  size?: any
+  edgeSize?: any
+}
+const defaultTheme: Theme = {
+  color: theme.color.light,
+  size: theme.size.medium,
+  edgeSize: theme.edgeSize,
+}
+
 function App() {
   return (
-    <ThemeProvider
-      theme={{
-        color: theme.color.light,
-        size: theme.size.medium,
-        edgeSize: theme.edgeSize,
-      }}
-    >
+    <ThemeProvider theme={defaultTheme}>
       <Router>
         <Switch>
           {routes.map((route) => {

@@ -1,6 +1,6 @@
 const theme = {
   color: {
-    light: {'dark-1': 'gray'},
+    light: {'dark-1': 'gray', sun: '#FDB813'},
     dark: {'dark-1': 'blue'},
   },
   size: {
